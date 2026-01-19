@@ -5,7 +5,7 @@ export function Background() {
     <>
       {/* absolute inset-0 实现铺满屏幕，pointer-events-none 让鼠标选不中这个元素，overflow-hidden 则表示多余的全裁切掉 */}
       <div
-        className="absolute inset-0 pointer-events-none overflow-hidden"
+        className="pointer-events-none absolute inset-0 overflow-hidden"
         // 这里我手动将背景设置为黑色，这样才能看到效果
         style={{ background: "#0f1115" }}
       >
@@ -13,12 +13,12 @@ export function Background() {
         {/* 这里说明他是怎么计算的，先看 top-1/4，他将元素顶部空出 25% 的空间，然后配合 -translate-y-1/2 将元素向上移动一半的自身高度，这样就实现了将中心点设置到 top-1/4 的位置 */}
         {/* left-1/2 则是先向右移动了 50%，左边的 50% 空出来，然后再 -translate-x-1/2 将元素一半的宽度移动回来，这样就实现了将中心点设置到 left-1/2 的位置 */}
         {/* bg-accent/5 是这个色块的颜色，rounded-full 是将其变成圆形，blur-[120px] 是打上高斯模糊 */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-[#00e599]/5 rounded-full blur-[120px]" />
+        <div className="absolute top-1/4 left-1/2 h-200 w-200 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#00e599]/5 blur-[120px]" />
         {/* 这里实现方式类似，最终加上了高斯模糊，这里是紫色 */}
-        <div className="absolute bottom-0 right-0 w-150 h-150 bg-[#7F56D9]/5 rounded-full blur-[100px]" />
+        <div className="absolute right-0 bottom-0 h-150 w-150 rounded-full bg-[#7F56D9]/5 blur-[100px]" />
         {/* 下面是网格的实现 */}
         <svg
-          className="absolute inset-0 w-full h-full opacity-10"
+          className="absolute inset-0 h-full w-full opacity-10"
           xmlns="http://www.w3.org/2000/svg"
         >
           {/* 定义一个 40*40 的单元格 */}
