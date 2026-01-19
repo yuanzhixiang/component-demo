@@ -10,6 +10,8 @@
   // 将默认的格式化工具设置为 prettier
   // vscode 里面似乎会默认这样设置，但 antigravity 需要手动设置
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // 设置 vscode 使用我们安装的 prettier，主要是要让 prettier 走我们的配置文件
+  "prettier.prettierPath": "./node_modules/prettier",
 
   // 关闭 vscode 内的代码提示
   "github.copilot.enable": {
