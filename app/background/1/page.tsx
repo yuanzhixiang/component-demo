@@ -1,5 +1,5 @@
-import { Background } from "@/components/background1";
+import { Background } from "@/components/background/background1";
 
 export default function Page() {
-    return <Background />;
+  return <Background />;
 }
